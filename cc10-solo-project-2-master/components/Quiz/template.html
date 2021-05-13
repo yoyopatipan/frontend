@@ -1,0 +1,22 @@
+<div class="quiz">
+  <div class="question">
+    <h2>Q{{ quizNo }}</h2>
+    <el-progress class="progress" :percentage="percentage" :color="customColors"></el-progress>
+    <img src="~/assets/images/money-tree2.jpeg" />
+    <div class="category">Category : {{ currentQuestionAndCategory["category"] }}</div>
+    <div class="sentence">{{ currentQuestionAndCategory["question"] }}</div>
+  </div>
+  <div class="options">
+    <h3>options</h3>
+    <div class="buttons">
+      <el-button type="primary" round @click="judgeAnswer(currentOptions[0]); increase()">1. {{currentOptions[0]}}</el-button>
+      <el-button type="primary" round @click="judgeAnswer(currentOptions[1]); increase()">2. {{currentOptions[1]}}</el-button>
+      <el-button type="primary" round @click="judgeAnswer(currentOptions[2]); increase()">3. {{currentOptions[2]}}</el-button>
+      <el-button type="primary" round @click="judgeAnswer(currentOptions[3]); increase()">4. {{currentOptions[3]}}</el-button>
+    </div>
+  </div>
+  <div class="not-answer">
+    <el-button type="info" round class="button" @click="goHome">Give up</el-button>
+    <el-button type="warning" round class="button" @click="addQuizNo; increase()">Pass</el-button>
+  </div>
+</div>
