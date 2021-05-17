@@ -57,7 +57,7 @@
           margin-top: 50px;
         "
       >
-        เข้าสู่ระบบ hello
+        เข้าสู่ระบบ
       </b-button>
     </div>
   </div>
